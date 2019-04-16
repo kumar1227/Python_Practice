@@ -1,0 +1,7 @@
+import json
+with open('Json.txt') as json_file:
+    data = json.load(json_file)
+    for p in data:
+        reponame = p["name"]
+        ownerdetails = p["owner"]
+        print('org name: '+reponame+';'+'repodetails: '+ownerdetails["login"])
