@@ -4,4 +4,7 @@ with open('Json.txt') as json_file:
     for p in data:
         reponame = p["name"]
         ownerdetails = p["owner"]
-        print('org name: '+reponame+';'+'repodetails: '+ownerdetails["login"])
+        orgname = ownerdetails["login"]
+        #--------or----------------
+        #orgname = p["owner"]["login"]
+        print('org name: '+orgname+';'+'repodetails: '+reponame)
