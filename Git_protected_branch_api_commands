@@ -1,0 +1,26 @@
+Get the protected branch details:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches -d '{"protected": true}'
+
+Get the branch protection details:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection
+
+Get the status checks of the protected branch:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection/required_status_checks
+
+Get pull request review enforcement:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection/required_pull_request_reviews
+
+Get the required signature of the protected branch:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection/required_signatures
+
+Get the admin enforment of the protected branch:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection/enforce_admins
+
+Get the restrictions of the protected branch:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection/restrictions
+
+Get the teams restrction of the protected branch:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection/restrictions/teams
+
+Get the user restriction of the protected branch:
+curl -XGET -u <UID>:<PASSWD> https://gitprod.statestr.com/v3/api/repos/<owner>/<repo>/branches/<branch>/protection/restrictions/users
